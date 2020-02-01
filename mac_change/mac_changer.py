@@ -26,12 +26,12 @@ def change_mac_adress(interface, new_mac):
     subprocess.call(["sudo", "ifconfig", interface, "down"])                    # stop mac-adress
     subprocess.call(["sudo", "ifconfig", interface, "hw", "ether", new_mac])    # install new mac-adress
     subprocess.call(["sudo", "ifconfig", interface, "up"])                      # new mac-adress activate
-    subprocess.call(["sudo", "ifconfig", interface])                            # help mac adress
+    subprocess.call()
 
 value = get_arguments()                                                         # result function add variable
 # change_mac_adress(value.interface, value.new_mac)                               # run function
 
-
+ifconfig_result = subprocess.check_output(["sudo", "ifconfig", value.interface]) # result work command
 
 
 
