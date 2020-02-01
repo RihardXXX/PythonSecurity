@@ -29,7 +29,7 @@ def change_mac_adress(interface, new_mac):
     subprocess.call(["sudo", "ifconfig", interface])                            # help mac adress
 
 value = get_arguments()                                                         # result function add variable
-change_mac_adress(value.interface, value.new_mac)                               # run function
+# change_mac_adress(value.interface, value.new_mac)                               # run function
 
 
 
