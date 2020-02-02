@@ -5,7 +5,7 @@ from scapy.all import *
 
 def scan(ip):
     arp_request = scapy.ARP(pdst=ip)                           # Create object ARP request
-    print(arp_request.summary())
+    print(arp_request.summary())                  # <-------- not worjing program
 
 
 
